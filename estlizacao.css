@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@200&family=Playfair+Display:ital,wght@0,500;1,400&display=swap');
+/*   
+font-family: 'Arima', cursive;
+font-family: 'Playfair Display', serif;
+
+font-family: 'Playfair Display', serif;
+*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Arima', cursive;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    width: 70vw;
+  
+
+
+}
+.panel{
+    background-size: auto 100%;
+    /* background-size: cover */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: rgb(67, 147, 179);
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+    
+
+}
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+    
+}
+
+@media(max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-oh-type(4), .panel:nth-od-type(5){
+        display: none;
+    }
+
+}
